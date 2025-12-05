@@ -10,8 +10,8 @@ const server = http.createServer(app);
 // React 개발 서버 (vite/CRA)의 기본 포트 3000, 5173 등을 여기에 허용해야 합니다.
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173", "http://127.0.0.1:3000"], // 프론트엔드 주소 허용
-    methods: ["GET", "POST"]
+origin: "https://game-ql52-gituxelwp-1592s-projects.vercel.app", 
+        methods: ["GET", "POST"]
   }
 });
 
