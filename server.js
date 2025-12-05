@@ -115,10 +115,15 @@ io.on('connection', (socket) => {
     });
 });
 
-
 // --------------------
 // 4. 서버 시작
 // --------------------
-server.listen(PORT, () => {
-    console.log(`✅ 서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
+// 환경 변수에서 포트 번호를 가져옵니다. (Railway는 PORT 환경 변수를 사용)
+const PORT = process.env.PORT || 3456; 
+// 0.0.0.0은 모든 IP에서 접근을 허용한다는 의미입니다.
+const HOST = '0.0.0.0'; 
+
+server.listen(PORT, HOST, () => {
+    // 로그 메시지도 HOST를 사용하도록 변경합니다.
+    console.log(`✅ 서버가 http://${HOST}:${PORT} 에서 실행 중입니다.`);
 });
