@@ -10,12 +10,19 @@ const server = http.createServer(app);
 // React 개발 서버 (vite/CRA)의 기본 포트 3000, 5173 등을 여기에 허용해야 합니다.
 const io = new Server(server, {
   cors: {
-origin: "https://game-ql52-gituxelwp-1592s-projects.vercel.app", 
+origin: 'https://game-q152.vercel.app', 
         methods: ["GET", "POST"]
   }
 });
 
-const PORT = 3456; // 서버 포트
+// const io = new Server(server, {
+//   cors: {
+// origin: 'https://game-production-48c8.up.railway.app', 
+//         methods: ["GET", "POST"]
+//   }
+// });
+
+// const PORT = 3456; // 서버 포트
 
 // --------------------
 // 1. 임시 데이터베이스 (실제 데이터베이스로 대체 필요)
