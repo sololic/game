@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // React 개발 서버 (vite/CRA)의 기본 포트 3000, 5173 등을 여기에 허용해야 합니다.
 const io = new Server(server, {
   cors: {
-origin: 'https://game-q152.vercel.app', 
+        origin: '*', 
         methods: ["GET", "POST"]
   }
 });
